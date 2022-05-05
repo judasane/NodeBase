@@ -11,14 +11,22 @@ export default {
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
 
+  // A list of paths to directories that Jest should use to search for files in
+  roots: ['<rootDir>/src'],
+
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  collectCoverageFrom: ['<rootdir>/src/**/*.ts'],
+
+  // A map from regular expressions to paths to transformers
+  transform: {
+    '.+\\.ts$': 'ts-jest',
+  },
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
   // Stop running tests after `n` failures
   // bail: 0,
-
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -115,11 +123,6 @@ export default {
   // The root directory that Jest should scan for tests and modules within
   // rootDir: undefined,
 
-  // A list of paths to directories that Jest should use to search for files in
-  // roots: [
-  //   "<rootDir>"
-  // ],
-
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
@@ -163,9 +166,6 @@ export default {
 
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
-
-  // A map from regular expressions to paths to transformers
-  // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
