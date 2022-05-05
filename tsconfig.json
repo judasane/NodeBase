@@ -12,6 +12,7 @@
     "dist"
   ],
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "jest.config.ts"
   ]
 }
